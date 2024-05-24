@@ -34,57 +34,24 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td class="redondedoInicio">1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td >&#64;mdo</td>
-                    <td *ngIf="verMenu">&#64;mdo</td>
-                    <td *ngIf="verMenu">&#64;mdo</td>
-                    <td class="redondedoFinal">&#64;mdo</td>
-                    <td class="redondeoCompleto">
-                      <i class='bx bx-lock-open-alt p-1'></i>
-                      <i class='bx bxs-download p-1' ></i>
-                      |
-                      <i class='bx bx-show p-1'></i>
-                      <i class='bx bx-trash p-1'></i>
-                      <i class="bx bx-printer p-1"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="redondedoInicio">2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td >&#64;fat</td>
-                    <td *ngIf="verMenu">&#64;fat</td>
-                    <td *ngIf="verMenu">&#64;fat</td>
-                    <td class="redondedoFinal">&#64;fat</td>
-                    <td class="redondeoCompleto">
-                      <i class='bx bx-lock-open-alt p-1'></i>
-                      <i class='bx bxs-download p-1' ></i>
-                      |
-                      <i class='bx bx-show p-1'></i>
-                      <i class='bx bx-trash p-1'></i>
-                      <i class="bx bx-printer p-1"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="redondedoInicio">3</td>
-                    <td>Thornton</td>
-                    <td>Thornton</td>
-                    <td >&#64;twitter</td>
-                    <td *ngIf="verMenu">&#64;twitter</td>
-                    <td *ngIf="verMenu">&#64;twitter</td>
-                    <td class="redondedoFinal">&#64;twitter</td>
-                    <td class="redondeoCompleto">
-                      <i class='bx bx-lock-open-alt p-1'></i>
-                      <i class='bx bxs-download p-1' ></i>
-                      |
-                      <i class='bx bx-show p-1'></i>
-                      <i class='bx bx-trash p-1'></i>
-                      <i class="bx bx-printer p-1"></i>
-                    </td>
-                  </tr>
+                  @for (PeriodicElement of dataSource; track PeriodicElement) {
+                    <tr>
+                      <td class="redondedoInicio">{{PeriodicElement.noDocumento}}</td>
+                      <td>{{PeriodicElement.fechaDocumento}}</td>
+                      <td>{{PeriodicElement.idCliente}}</td>
+                      <td > </td>
+                      <td class="redondedoFinal">{{PeriodicElement.idEstadoDocumento}}</td>
+                      <td class="redondeoCompleto">
+                        <i class='bx bx-lock-open-alt p-1'></i>
+                        <i class='bx bxs-download p-1' ></i>
+                        |
+                        <i class='bx bx-show p-1'></i>
+                        <i class='bx bx-trash p-1'></i>
+                        <i class="bx bx-printer p-1"></i>
+                      </td>
+                    </tr>
+                   }
+
                 </tbody>
               </table>
 

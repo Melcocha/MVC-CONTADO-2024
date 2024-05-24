@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,7 +15,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { HomeComponent } from './components/home/home.component';
 import { DistribucioncompletaComponent } from './components/distribucioncompleta/distribucioncompleta.component';
-
+import { ApolloModule } from 'apollo-angular';
 
 @NgModule({
   declarations: [
@@ -36,8 +36,9 @@ import { DistribucioncompletaComponent } from './components/distribucioncompleta
     MatInputModule,
     MatPaginatorModule,
     MatAutocompleteModule,
+    ApolloModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
